@@ -1,5 +1,5 @@
 import { useGetRestaurant } from "@/api/RestaurantApi";
-import MenuItemComponent from "@/components/MenuItemComponent";
+import MenuItem from "@/components/MenuItem";
 import OrderSummary from "@/components/OrderSummary";
 import RestaurantInfo from "@/components/RestaurantInfo";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -121,7 +121,7 @@ const DetailPage = () => {
           <RestaurantInfo restaurant={restaurant} />
           <span className="text-2xl font-bold tracking-tight">Menu</span>
           {restaurant.menuItems.map((menuItem) => (
-            <MenuItemComponent
+            <MenuItem
               menuItem={menuItem}
               addToCart={() => addToCart(menuItem)}
             />
